@@ -4,19 +4,37 @@
 // front end
 
 window.addEventListener('DOMContentLoaded', async () => {
-   const res = await fetch("/kitten/image");
-   const resJson = await res.json();
-   console.log(resJson.src)
+  let res = await fetch("/kitten/image");
+  let resJson = await res.json();
+  //  console.log(`Link to pic: ${resJson.src}`)
 
     // .then(res => res.json())
     // .then(jsonResult => console.log(jsonResult))
     // .then()
-
+  
   // console.log(fetch("/kitten/image"))
 
   const img = document.querySelector('.cat-pic');
-  console.log(img);
+  // console.log(`TheImageElement: ${img}`);
   img.setAttribute('src', resJson.src);
+  
+  const newButton = document.getElementById("new-pic");
 
+  newButton.addEventListener('click', async () => {
+    const loadEl = document.querySelector(".loader")
+    loadEl.innerHTML =  "Loading...";
+    console.log(loadEL);
+    res = await fetch("/kitten/image"); 
+
+    resJson = await res.json();
+    loadEl.innerHTML = "";
+    // console.log(loadEl.innerText);
+    // console.log(`Hopefully New Pic: ${resJson.src}`);
+    img.setAttribute('src', resJson.src);
+
+
+
+
+  })
 
 });
