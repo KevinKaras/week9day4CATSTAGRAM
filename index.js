@@ -1,13 +1,15 @@
+// this is the backend
+
 const express = require("express");
 const path = require("path");
 const axios = require("axios");
 const bodyParser = require("body-parser");
-
+// console.log('hello')
 const app = express();
 app.use(bodyParser.json());
 app.use(express.static("public"));
 
-const port = 3000;
+const port = 5000;
 
 // Controls the probability of an error being thrown. If ERROR_RATE is 0, then
 // an error will never be thrown. If ERROR_RATE is 100, then an error will

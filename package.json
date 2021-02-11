@@ -10,9 +10,19 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.2",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KevinKaras/week9day4CATSTAGRAM.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/KevinKaras/week9day4CATSTAGRAM/issues"
+  },
+  "homepage": "https://github.com/KevinKaras/week9day4CATSTAGRAM#readme"
 }
