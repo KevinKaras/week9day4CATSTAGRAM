@@ -32,10 +32,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     // console.log(loadEl.innerText);
     // console.log(`Hopefully New Pic: ${resJson.src}`);
     img.setAttribute('src', resJson.src);
-
-
-
-
   })
+
 
 });
