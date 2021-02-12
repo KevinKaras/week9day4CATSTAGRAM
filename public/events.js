@@ -11,23 +11,24 @@ window.addEventListener('DOMContentLoaded', async () => {
     // .then(res => res.json())
     // .then(jsonResult => console.log(jsonResult))
     // .then()
-  
+
   // console.log(fetch("/kitten/image"))
 
   const img = document.querySelector('.cat-pic');
   // console.log(`TheImageElement: ${img}`);
   img.setAttribute('src', resJson.src);
-  
-  const newButton = document.getElementById("new-pic");
 
-  newButton.addEventListener('click', async () => {
-    const loadEl = document.querySelector(".loader")
-    loadEl.innerHTML =  "Loading...";
-    console.log(loadEL);
-    res = await fetch("/kitten/image"); 
+  const newButton = document.getElementById("new-pic");
+  let loadEl = document.querySelector(".loader")
+
+  newButton.addEventListener('click', async (event) => {
+    // event.preventDefault();
+    loadEl.innerText =  "Loading...";
+    // console.log(loadEL);
+    res = await fetch("/kitten/image");
 
     resJson = await res.json();
-    loadEl.innerHTML = "";
+    loadEl.innerText = "";
     // console.log(loadEl.innerText);
     // console.log(`Hopefully New Pic: ${resJson.src}`);
     img.setAttribute('src', resJson.src);
