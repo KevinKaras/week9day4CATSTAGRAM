@@ -11,14 +11,15 @@ window.addEventListener('DOMContentLoaded', async () => {
     // .then(res => res.json())
     // .then(jsonResult => console.log(jsonResult))
     // .then()
-  
+
   // console.log(fetch("/kitten/image"))
 
   const img = document.querySelector('.cat-pic');
   // console.log(`TheImageElement: ${img}`);
   img.setAttribute('src', resJson.src);
-  
+
   const newButton = document.getElementById("new-pic");
+  let loadEl = document.querySelector(".loader")
 
   newButton.addEventListener('click', async () => {
     // try {
@@ -37,5 +38,6 @@ window.addEventListener('DOMContentLoaded', async () => {
     //   throw res;
     // }
   })
+
 
 });
