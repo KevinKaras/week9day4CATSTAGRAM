@@ -21,20 +21,21 @@ window.addEventListener('DOMContentLoaded', async () => {
   const newButton = document.getElementById("new-pic");
 
   newButton.addEventListener('click', async () => {
-    const loadEl = document.querySelector(".loader")
-    loadEl.innerHTML =  "Loading...";
-    console.log(loadEL);
-    res = await fetch("/kitten/image"); 
+    // try {
+      const loadEl = document.querySelector(".loader")
+      loadEl.innerHTML =  "Loading...";
+      // console.log(loadEL);
+      res = await fetch("/kitten/image"); 
 
-    resJson = await res.json();
-    loadEl.innerHTML = "";
-    // console.log(loadEl.innerText);
-    // console.log(`Hopefully New Pic: ${resJson.src}`);
-    img.setAttribute('src', resJson.src);
-
-
-
-
+      resJson = await res.json();
+      loadEl.innerHTML = "";
+      // console.log(loadEl.innerText);
+      // console.log(`Hopefully New Pic: ${resJson.src}`);
+      img.setAttribute('src', resJson.src);
+    // }
+    // catch(res) {
+    //   throw res;
+    // }
   })
 
 });
